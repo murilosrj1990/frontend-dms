@@ -8,6 +8,36 @@
   transform: translateY(-50%);
 }
 
+ion-footer{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+ion-button{
+  border-radius: 50px;
+  margin-top: 30px;
+}
+
+ion-item {
+  margin-top: 5px;
+  border: 2px #8c8c8c solid;
+  border-radius: 50px;
+  width: 70%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+ion-icon {
+  margin-right: 10px;
+}
+
+ion-img {
+  width: 40%;
+  margin-left: 50%;
+  margin-bottom: 30px;
+  transform: translateX(-50%);
+}
+
 #container strong {
   font-size: 20px;
   line-height: 26px;

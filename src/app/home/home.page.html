@@ -1,20 +1,18 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-img src="../../assets/logo.svg"></ion-img>
+    <ion-item>
+      <ion-icon name="person-circle-outline"></ion-icon>
+      <ion-input placeholder="Email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="lock-closed-outline"></ion-icon>
+      <ion-input type="password" placeholder="Senha" [(ngModel)]="senha"></ion-input>
+    </ion-item>
+    <ion-button shape="round" (click)="entrar()">Entrar</ion-button>
   </div>
 </ion-content>
+<ion-footer>
+  <ion-label>Ainda não tem cadastro? <a>Clique aqui</a> e cadastre-se já.</ion-label>
+</ion-footer>

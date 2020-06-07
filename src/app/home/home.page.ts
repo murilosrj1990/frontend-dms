@@ -7,6 +7,13 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  public email:string;
+  public senha:string;
+
   constructor() {}
+
+  entrar(){
+    console.log(this.email, this.senha);
+  }
 
 }
