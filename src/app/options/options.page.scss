@@ -1,0 +1,37 @@
+img {
+    margin-top: 60px;
+    width: 30vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+ion-label{
+    color: #FFF;
+}
+
+ion-icon{
+    margin-top: 15px;
+    font-size: 30px;
+}
+
+.option-detail{
+    margin-bottom: 5px;
+    border: 2px #DB0000 solid;
+    height: 65px;
+    width: 100px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #FFF;
+}
+
+.option{
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #DB0000;
+    margin-left: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transform: translateX(-50%);
+}

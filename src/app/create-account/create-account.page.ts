@@ -15,7 +15,7 @@ export class CreateAccountPage implements OnInit {
   constructor() { }
 
   create(){
-    console.log(this.name,this.email,this.phone,this.password);
+    console.log(this.name,this.email,this.phone,this.password, this.confirm_password);
   }
 
   ngOnInit() {
