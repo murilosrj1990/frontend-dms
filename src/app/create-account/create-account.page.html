@@ -1,0 +1,32 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/home">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Criar conta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-input placeholder="Nome" [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input placeholder="Email" [(ngModel)]="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="tel" placeholder="Telefone com DDD" [(ngModel)]="phone"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="password" placeholder="Senha" [(ngModel)]="password"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-input type="password" placeholder="Confirmar Senha" [(ngModel)]="confirm_password"></ion-input>
+    </ion-item>
+
+</ion-content>
+<ion-footer>
+  <ion-button (click)="create()" size="full" shape="round" color="primary">Criar</ion-button>
+</ion-footer>
