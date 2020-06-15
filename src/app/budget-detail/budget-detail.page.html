@@ -1,0 +1,43 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="primary" defaultHref="budgets"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="12" offset-lg="3" size-lg="6">
+      <ion-item lines="none">
+        <ion-label>
+          <h2>VALOR TOTAL: R$ {{budget_price.toFixed(2)}}</h2>
+          <h2>VALIDADE: {{budget.valid_at | date: 'dd/MM/yyyy'}}</h2>
+          <h2>PROCEDIMENTOS:</h2>
+        </ion-label>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12" offset-lg="3" size-lg="6">
+      <ion-list>
+        <ion-item lines="none" *ngFor="let procedure of budget.procedures" class="ion-text-wrap">
+          <ion-thumbnail color="primary" slot="start">
+            <ion-label class="titulo-thumb">DENTE</ion-label>
+            <div class="date ion-text-center">
+              <ion-label>{{procedure.tooth_number}}</ion-label>
+            </div>
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{procedure.name}}</h2>
+          </ion-label>
+          <ion-thumbnail class="thumb-price" color="primary" slot="end">
+            <ion-label class="titulo-thumb-price">VALOR(R$)</ion-label>
+            <ion-label class="price">{{procedure.price.toFixed(2)}}</ion-label>
+          </ion-thumbnail>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+</ion-content>

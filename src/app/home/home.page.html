@@ -1,19 +1,28 @@
 <ion-content [fullscreen]="true">
-
   <div id="container">
-    <ion-img src="../../assets/logo.svg"></ion-img>
-    <ion-item>
-      <ion-icon name="person-circle-outline"></ion-icon>
-      <ion-input placeholder="Email" [(ngModel)]="email"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-icon name="lock-closed-outline"></ion-icon>
-      <ion-input type="password" placeholder="Senha" [(ngModel)]="senha"></ion-input>
-    </ion-item>
-    <ion-button shape="round" (click)="entrar()">Entrar</ion-button>
+    <ion-row>
+      <ion-col offset-lg="4" size="12" size-lg="4">
+        <ion-img src="../../assets/logo.svg"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col offset-lg="4" size="12" size-lg="4">
+        <ion-item>
+          <ion-icon name="person-circle-outline"></ion-icon>
+          <ion-input placeholder="Email" [(ngModel)]="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <ion-input type="password" placeholder="Senha" [(ngModel)]="senha"></ion-input>
+        </ion-item>
+        <ion-button shape="round" (click)="entrar()">Entrar</ion-button>
+      </ion-col>
+    </ion-row>
   </div>
 </ion-content>
-<ion-footer>
+
+
+<ion-footer class="ion-no-border">
   <div class="ion-text-center">
     <ion-label>Ainda não tem cadastro?<br><a routerLink="/create-account">Clique aqui</a> e cadastre-se já.</ion-label>
   </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-budgets',
@@ -9,7 +10,7 @@ export class BudgetsPage implements OnInit {
 
   public budgetList = [];
 
-  constructor() {
+  constructor(private router:Router) {
     this.buildList();
    }
 
@@ -26,6 +27,7 @@ export class BudgetsPage implements OnInit {
 
     for (let i = 0; i <= 7; i++) {
       const newBudget = {
+        id: (Math.round((Math.random() * 10) ) ),
         price: 0.0,
         createdAt: new Date().toLocaleDateString(),
         procedures: [{}, {}]
@@ -38,6 +40,12 @@ export class BudgetsPage implements OnInit {
 
   refresh(){
     console.log("Lista atualizada.")
+  }
+
+  openBudgetDetail(budget_id){
+    console.log(budget_id);
+    this.router.navigateByUrl('/budget-detail/'+budget_id);
+    
   }
 
 }

@@ -1,0 +1,54 @@
+
+ion-thumbnail {
+    position: relative;
+    border-radius: 10px;
+    background-color: #DB0000
+}
+
+
+.thumb-price {
+    width: 80px;
+    position: relative;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.price {
+    position: absolute;
+    font-size: 15pt;
+    margin-left: 50%;
+    margin-top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+ion-label .price {
+    color: #000;
+}
+
+.date {
+    color: rgb(255, 255, 255);
+}
+
+.date {
+    margin-left: 50%;
+    margin-top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.titulo-thumb-price{
+    position: absolute;
+    top: 5px;
+    left: 50%; 
+    transform: translateX(-50%);
+    font-size: 6pt;
+}
+
+.titulo-thumb{
+    position: absolute;
+    writing-mode: vertical-lr;
+    left: 3px;
+    top: 50%; 
+    transform: translateY(-50%);
+    font-size: 6pt;
+    color: #FFF;
+}
