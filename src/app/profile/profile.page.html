@@ -1,0 +1,30 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="primary" defaultHref="options"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Meu Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="12" size-lg="6" offset-lg="3">
+      <div class="div-profile-img"><img class="profile-img" src="../../assets/user.png"></div>
+    </ion-col>
+  </ion-row>
+  <ion-button size="small" class="btn-img-profile" shape="round" fill="outline">
+    <ion-icon name="person-circle-outline"></ion-icon> Foto do perfil
+  </ion-button>
+  <ion-label class="ion-text-center">
+    <h2>Nome: {{profile.name}}</h2>
+    <h2>Telefone: {{profile.phone}}</h2>
+    <h2>E-mail: {{profile.email}}</h2>
+  </ion-label>
+
+  <ion-button size="small" class="btn-change-password" shape="round">
+    <ion-icon name="key-outline"></ion-icon> Mudar senha
+  </ion-button>
+
+
+</ion-content>
