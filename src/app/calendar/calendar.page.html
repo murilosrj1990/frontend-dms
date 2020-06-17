@@ -1,0 +1,33 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="primary" defaultHref="options"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Agenda</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="12" offset-lg="3" size-lg="6">
+      <ion-list>
+        <ion-item lines="none" detail *ngFor="let calendar of calendarList">
+          <ion-thumbnail color="primary" slot="start">
+            <ion-label class="titulo-thumb">DATA</ion-label>
+            <div class="date ion-text-center">
+              <ion-label>{{ calendar.scheduledAt | date :"dd" }}</ion-label>
+              <ion-label>{{ calendar.scheduledAt | date :"MM" }}</ion-label>
+              <ion-label>{{ calendar.scheduledAt | date :"yy" }}</ion-label>
+            </div>
+          </ion-thumbnail>
+          <ion-label>
+            <h2>HORA - {{calendar.scheduledAt | date :"HH:mm" }}</h2>
+            <h2>DENTE - {{calendar.procedure.tooth_number}}</h2>
+            <h2>REALIZADO - {{calendar.performed ? 'Sim' : 'Não'}}</h2>
+            <h2>NOME - {{calendar.procedure.name}}</h2>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+</ion-content>

@@ -1,0 +1,29 @@
+ion-thumbnail div ion-label{
+    font-size: 11pt;
+    color: #FFF
+}
+
+ion-thumbnail{
+    position: relative;
+    border-radius: 10px;
+    background-color: #DB0000
+}
+
+.titulo-thumb{
+    position: absolute;
+    writing-mode: vertical-lr;
+    left: 3px;
+    top: 50%; 
+    transform: translateY(-50%);
+    font-size: 6pt;
+    color: #FFF;
+}
+
+.date {
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+ion-fab{
+    top: -10px;
+}
