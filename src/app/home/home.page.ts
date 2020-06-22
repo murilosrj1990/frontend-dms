@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-home',
@@ -11,10 +12,10 @@ export class HomePage {
   public email:string;
   public senha:string;
 
-  constructor(private router:Router) {}
+  constructor(private router:Router,private auth:AuthService) {}
 
   entrar(){
-    console.log(this.email, this.senha);
+    this.auth.authToken(this.email,this.senha);
     this.router.navigateByUrl('options');
 
   }
