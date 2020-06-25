@@ -14,9 +14,12 @@ export class HomePage {
 
   constructor(private router:Router,private auth:AuthService) {}
 
-  entrar(){
-    this.auth.authToken(this.email,this.senha);
-    this.router.navigateByUrl('options');
+  async entrar(){
+    this.auth.authToken(this.email,this.senha).then((resolve:any)=>{
+      this.router.navigateByUrl('options');
+    })
+    
+    
 
   }
 

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth.service';
+import { UserService } from '../user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-account',
@@ -12,10 +15,15 @@ export class CreateAccountPage implements OnInit {
   public password:string;
   public confirm_password:string;
 
-  constructor() { }
+  constructor(private userService:UserService,private authService:AuthService,private router:Router) { }
 
   create(){
-    console.log(this.name,this.email,this.phone,this.password, this.confirm_password);
+    this.userService.createUser(this.email,this.password,this.name,this.phone).then((resolve:any)=>{
+      this.authService.authToken(this.email,this.password).then((res:any)=>{
+
+      this.router.navigateByUrl('options');
+      })
+    })
   }
 
   ngOnInit() {
