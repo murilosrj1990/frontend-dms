@@ -12,7 +12,6 @@
       <ion-item lines="none">
         <ion-label>
           <h2>VALOR TOTAL: R$ {{budget_price.toFixed(2)}}</h2>
-          <h2>VALIDADE: {{budget.valid_at | date: 'dd/MM/yyyy'}}</h2>
           <h2>PROCEDIMENTOS:</h2>
         </ion-label>
       </ion-item>
@@ -22,7 +21,7 @@
   <ion-row>
     <ion-col size="12" offset-lg="3" size-lg="6">
       <ion-list>
-        <ion-item lines="none" *ngFor="let procedure of budget.procedures" class="ion-text-wrap">
+        <ion-item lines="none" *ngFor="let procedure of procedures" class="ion-text-wrap">
           <ion-thumbnail color="primary" slot="start">
             <ion-label class="titulo-thumb">DENTE</ion-label>
             <div class="date ion-text-center">

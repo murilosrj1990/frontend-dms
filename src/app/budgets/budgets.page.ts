@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { BudgetService } from '../budget.service';
+import { AuthService } from '../auth.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-budgets',
@@ -8,13 +11,15 @@ import { Router } from '@angular/router';
 })
 export class BudgetsPage implements OnInit {
 
-  public budgetList = [];
+  public budgetList:Observable<any>;
 
-  constructor(private router:Router) {
-    this.buildList();
+  constructor(private router:Router,
+    private budgetService:BudgetService,
+    private auth:AuthService) {
    }
 
-  ngOnInit() {
+  ngOnInit(){
+    this.buildList();
   }
 
   tratamentoStringData(data) {
@@ -24,27 +29,30 @@ export class BudgetsPage implements OnInit {
   }
 
   buildList() {
-
-    for (let i = 0; i <= 7; i++) {
-      const newBudget = {
-        id: (Math.round((Math.random() * 10) ) ),
-        price: 0.0,
-        createdAt: new Date().toLocaleDateString(),
-        procedures: [{}, {}]
-      }
-
-      this.budgetList.push(newBudget);
-    }
+    console.log(this.auth.user.id,this.auth.bearer_token);
+    let userId = this.auth.user.id;
+    let token = this.auth.bearer_token;
+    this.budgetService.getBudgetsById(userId,token).then((resolve:any)=>{
+        this.budgetList = resolve;
+    })
 
   }
 
+
+
   refresh(){
-    console.log("Lista atualizada.")
+    let userId = this.auth.user.id;
+    let token = this.auth.bearer_token;
+    this.budgetService.getBudgetsById(userId,token).then((resolve:any)=>{
+        this.budgetList = resolve;
+    })
   }
 
   openBudgetDetail(budget_id){
-    console.log(budget_id);
     this.router.navigateByUrl('/budget-detail/'+budget_id);
+  }
+  
+  removeBudget(){
     
   }
 

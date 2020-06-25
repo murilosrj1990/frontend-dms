@@ -19,14 +19,12 @@
           <ion-thumbnail color="primary" slot="start">
             <ion-label class="titulo-thumb">VALIDADE</ion-label>
             <div class="date ion-text-center">
-              <ion-label>{{tratamentoStringData(budget.createdAt)[0]}}</ion-label>
-              <ion-label>{{tratamentoStringData(budget.createdAt)[1]}}</ion-label>
-              <ion-label>{{tratamentoStringData(budget.createdAt)[2].substring(2,4)}}</ion-label>
+              <ion-label>{{budget.createdAt | date: "dd"}}</ion-label>
+              <ion-label>{{budget.createdAt | date: "MM"}}</ion-label>
+              <ion-label>{{budget.createdAt | date: "yy"}}</ion-label>
             </div>
           </ion-thumbnail>
           <ion-label>
-            <h2>VALOR(R$): {{budget.price.toFixed(2)}}</h2>
-            <h2>PROCEDIMENTOS: {{budget.procedures.length}}</h2>
           </ion-label>
         </ion-item>
       </ion-list>

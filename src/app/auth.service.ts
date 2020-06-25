@@ -20,7 +20,6 @@ export class AuthService {
     const options ={
       headers
     }
-  
 
     return new Promise((resolve, reject)=>{
       var data ={
@@ -35,24 +34,13 @@ export class AuthService {
         this.bearer_token=result.token;
       },
       async (error)=>{
-        reject(error.json());
+        reject(error);
       })
     })
   }
 
-  getId(){
-    return this.user.id;
+  getToken(){
+    return this.bearer_token;
   }
 
-  getName(){
-    return this.user.name;
-  }
-
-  getPhone(){
-    return this.user.phone;
-  }
-
-  getEmail(){
-    return this.user.email;
-  }
 }
