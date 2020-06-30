@@ -19,12 +19,14 @@
           <ion-thumbnail color="primary" slot="start">
             <ion-label class="titulo-thumb">VALIDADE</ion-label>
             <div class="date ion-text-center">
-              <ion-label>{{budget.createdAt | date: "dd"}}</ion-label>
-              <ion-label>{{budget.createdAt | date: "MM"}}</ion-label>
-              <ion-label>{{budget.createdAt | date: "yy"}}</ion-label>
+              <ion-label>{{budget.valid_at | date: "dd"}}</ion-label>
+              <ion-label>{{budget.valid_at | date: "MM"}}</ion-label>
+              <ion-label>{{budget.valid_at | date: "yy"}}</ion-label>
             </div>
           </ion-thumbnail>
           <ion-label>
+            <h2>Registrado em:</h2>
+            <h2>{{budget.createdAt | date: "dd/MM/yy/ HH:mm"}}</h2>
           </ion-label>
         </ion-item>
       </ion-list>

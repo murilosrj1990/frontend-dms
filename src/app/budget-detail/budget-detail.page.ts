@@ -15,7 +15,9 @@ export class BudgetDetailPage implements OnInit {
   budget_price:number=0;
   public procedures:Observable<any>;
 
-  constructor(private route:ActivatedRoute, private service:ProcedureService,private auth:AuthService) { }
+  constructor(private route:ActivatedRoute, 
+    private service:ProcedureService,
+    private auth:AuthService) { }
 
   ngOnInit() {
     this.buildList();

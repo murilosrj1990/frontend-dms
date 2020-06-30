@@ -30,6 +30,7 @@ export class CreateAccountPage implements OnInit {
     await loading.present();
     this.userService.createUser(this.email,this.password,this.name,this.phone).then((resolve:any)=>{
       this.authService.authToken(this.email,this.password).then((res:any)=>{
+      loading.dismiss();
       this.showToastMessenger("Bem vindo "+res.user.name);
       this.router.navigateByUrl('options');
       }).catch((error)=>{

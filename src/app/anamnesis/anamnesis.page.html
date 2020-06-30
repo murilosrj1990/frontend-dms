@@ -1,0 +1,28 @@
+<ion-header class="no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="primary" defaultHref="profile"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Anamnese</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-item [(ngModel)]="anamnese">
+    <ion-item>
+      <ion-label>
+        <h2>{{anamnese.alergies}}</h2>
+        <h2>{{anamnese.blood_type}}</h2>
+        <h2>{{anamnese.hemophilic ? "Sim" : "Não"}}</h2>
+        <h2>{{anamnese.medication}}</h2>
+        <h2>{{anamnese.weak_breath}}</h2>
+        <h2>{{anamnese.fast_heartbeats}}</h2>
+        <h2>{{anamnese.hiv_chagas_hepatitis}}</h2>
+        <h2>{{anamnese.pregnant}}</h2>
+        <h2>{{anamnese.heart_disease}}</h2>
+        <h2>{{anamnese.feet_hands_swelling}}</h2>
+        <h2>{{anamnese.other_diseases}}</h2>
+        <h2>{{anamnese.comments}}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-item>
+</ion-content>
