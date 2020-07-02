@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'anamnesis/:id',
     loadChildren: () => import('./anamnesis/anamnesis.module').then( m => m.AnamnesisPageModule)
   },
+  {
+    path: 'list-anamnesis',
+    loadChildren: () => import('./list-anamnesis/list-anamnesis.module').then( m => m.ListAnamnesisPageModule)
+  },
 ];
 
 @NgModule({

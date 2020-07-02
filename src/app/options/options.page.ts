@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-options',
@@ -7,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OptionsPage implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
+  abreAnamnese(){
+    this.router.navigateByUrl("/anamnesis/1");
+  }
   ngOnInit() {
   }
 
