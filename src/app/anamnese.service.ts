@@ -7,6 +7,7 @@ import { HttpHeaders, HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AnamneseService {
+  endpointAddress="http://104.197.179.103:8080";
 
   anamnese;
   anamnesisList;
@@ -36,7 +37,7 @@ export class AnamneseService {
     }
   
     return new Promise((resolve, reject)=>{
-      this.http.get("http://localhost:3939/users/"+userId+"/anamnesis",options)
+      this.http.get(this.endpointAddress+"/users/"+userId+"/anamnesis",options)
       .subscribe((result:any) =>{
         resolve(result);
         load.dismiss();
@@ -73,7 +74,7 @@ export class AnamneseService {
     }
   
     return new Promise((resolve, reject)=>{
-      this.http.get("http://localhost:3939/anamnesis/"+id,options)
+      this.http.get(this.endpointAddress+"/anamnesis/"+id,options)
       .subscribe((result:any) =>{
         resolve(result);
         this.anamnese=result;

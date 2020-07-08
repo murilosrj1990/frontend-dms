@@ -6,6 +6,7 @@ import { HttpHeaders, HttpClient } from '@angular/common/http';
 })
 export class UserService {
 
+  endpointAddress="http://104.197.179.103:8080";
   constructor(private http:HttpClient) { }
 
   async createUser(email,password,name,phone){
@@ -25,7 +26,7 @@ export class UserService {
         phone
       };
 
-      this.http.post("http://localhost:3939/register",data,options)
+      this.http.post(this.endpointAddress+"/register",data,options)
       .subscribe((result:any) =>{
         resolve(result);
         return result;

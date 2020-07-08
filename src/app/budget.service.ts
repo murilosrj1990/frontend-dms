@@ -7,6 +7,8 @@ import { LoadingController } from '@ionic/angular';
 })
 export class BudgetService {
 
+  endpointAddress="http://104.197.179.103:8080";
+
   listBudgets;
   constructor(private http:HttpClient,private loading:LoadingController) { }
 
@@ -32,7 +34,7 @@ export class BudgetService {
   
     console.log(`Bearer ${token}`);
     return new Promise((resolve, reject)=>{
-      this.http.get("http://localhost:3939/users/"+userId+"/budgets",options)
+      this.http.get(this.endpointAddress+"/users/"+userId+"/budgets",options)
       .subscribe((result:any) =>{
         resolve(result);
         this.listBudgets=result;

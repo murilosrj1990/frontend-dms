@@ -6,6 +6,8 @@ import { HttpClient , HttpHeaders} from '@angular/common/http';
 })
 export class AuthService {
 
+  endpointAddress="http://104.197.179.103:8080";
+
   user:any;
   bearer_token:any;
   
@@ -27,7 +29,7 @@ export class AuthService {
         password
       };
 
-      this.http.post("http://localhost:3939/authenticate",data,options)
+      this.http.post(this.endpointAddress+"/authenticate",data,options)
       .subscribe((result:any) =>{
         resolve(result);
         this.user=result.user;

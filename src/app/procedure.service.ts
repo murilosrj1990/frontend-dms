@@ -7,6 +7,9 @@ import { LoadingController } from '@ionic/angular';
 })
 export class ProcedureService {
 
+  endpointAddress="http://104.197.179.103:8080";
+
+
   listProcedures;
 
   constructor(private http:HttpClient,private loading:LoadingController) { }
@@ -28,7 +31,7 @@ export class ProcedureService {
     }
   
     return new Promise((resolve, reject)=>{
-      this.http.get("http://localhost:3939/budgets/"+budgetId+"/procedures",options)
+      this.http.get(this.endpointAddress+"/budgets/"+budgetId+"/procedures",options)
       .subscribe((result:any) =>{
         resolve(result);
         this.listProcedures=result;

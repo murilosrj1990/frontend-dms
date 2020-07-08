@@ -21,10 +21,9 @@
             </div>
           </ion-thumbnail>
           <ion-label>
-            <h2>HORA - {{calendar.scheduledAt | date :"HH:mm" }}</h2>
-            <h2>DENTE - {{calendar.procedure.tooth_number}}</h2>
-            <h2>REALIZADO - {{calendar.performed ? 'Sim' : 'Não'}}</h2>
-            <h2>NOME - {{calendar.procedure.name}}</h2>
+            <h3>Horário: {{calendar.scheduledAt | date :"HH:mm" }} h</h3>
+            <h3>Realizado: {{calendar.performed ? 'Sim' : 'Não'}}</h3>
+            <h3>Procedimento: {{calendar.procedure.name}}</h3>
           </ion-label>
         </ion-item>
       </ion-list>
