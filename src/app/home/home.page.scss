@@ -1,8 +1,28 @@
 #container {
+  background: #fff;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
   position: absolute;
   width: 100%;
   top: 50%;
   transform: translateY(-50%);
+  padding-top: 70px;
+  padding-bottom: 40px;
+  height: 70%;
+}
+
+.header-home{
+  background: linear-gradient(117.51deg, #FA2323 -35.48%, #F2B3B3 107.42%), #FCD6D6;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 50%;
+}
+
+.header-home ion-label{
+  color: #fff;
+}
+.header-home ion-label a{
+  color: #00CCAA;
 }
 
 ion-footer{
@@ -27,7 +47,6 @@ ion-icon {
 }
 
 ion-img {
-  width: 40%;
   margin-left: 50%;
   margin-bottom: 30px;
   transform: translateX(-50%);
