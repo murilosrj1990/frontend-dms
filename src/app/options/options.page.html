@@ -1,43 +1,34 @@
 <ion-content>
   <div id="container">
+      <img src="../../assets/logo.svg">
     <ion-row>
       <ion-col size="12" offset-lg="3" size-lg="6">
-        <img src="../../assets/logo.svg">
-        <ion-row>
+        
+        <ion-row class="options-block">
           <ion-col>
-            <div button class="option" routerLink="/profile">
-              <div class="option-detail">
-                <ion-icon color="primary" name="person"></ion-icon>
-              </div>
-              <ion-label>Meu Perfil</ion-label>
+            <div class="option" button routerLink="/profile">
+              <ion-icon color="primary" name="person"></ion-icon>
+              <h2>Meu Perfil</h2>
             </div>
           </ion-col>
           <ion-col>
             <div button class="option" routerLink="/budgets">
-              <div class="option-detail">
-                <ion-icon color="primary" name="reader"></ion-icon>
-              </div>
-              <ion-label>Orçamento</ion-label>
-
+              <ion-icon color="primary" name="reader"></ion-icon>
+              <h2>Orçamento</h2>
             </div>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
             <div button class="option" routerLink="/home">
-              <div class="option-detail">
-                <ion-icon color="primary" name="exit"></ion-icon>
-              </div>
-              <ion-label>Sair</ion-label>
-
+              <ion-icon color="primary" name="exit"></ion-icon>
+              <h2>Sair</h2>
             </div>
           </ion-col>
           <ion-col>
             <div class="option" routerLink="/calendar">
-              <div class="option-detail">
                 <ion-icon color="primary" name="calendar"></ion-icon>
-              </div>
-              <ion-label>Agenda</ion-label>
+              <h2>Agenda</h2>
             </div>
           </ion-col>
         </ion-row>

@@ -1,5 +1,7 @@
 {
   "name": "frontend-appdrmylena",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
