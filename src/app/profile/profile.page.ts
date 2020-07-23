@@ -50,7 +50,6 @@ export class ProfilePage implements OnInit {
       }, (err) => {
         console.log(err);
       })
-      console.log(this.userProfilePathImage );
     }, (err) => {
       alert("Não foi possível fazer Upload da Imagem!");
     })
