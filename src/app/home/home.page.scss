@@ -1,21 +1,26 @@
-#container {
+#form-background {
+  margin-top: 20px;
+  margin-bottom: 0px;
   background: #fff;
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
-  position: absolute;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+  height: calc(100% - 58px);
+  position: relative;
+}
+
+#container {
   width: 100%;
+  position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  padding-top: 70px;
-  padding-bottom: 40px;
-  height: 70%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 .header-home{
   background: linear-gradient(117.51deg, #FA2323 -35.48%, #F2B3B3 107.42%), #FCD6D6;
   padding-top: 20px;
-  padding-bottom: 20px;
-  height: 50%;
+  padding-bottom: 0px;
+  height: 100%;
 }
 
 .header-home ion-label{
@@ -23,10 +28,7 @@
 }
 .header-home ion-label a{
   color: #00CCAA;
-}
-
-ion-footer{
-  padding-bottom: 20px;
+  text-decoration: none;
 }
 
 ion-button{
@@ -40,13 +42,15 @@ ion-item {
   margin-top: 5px;
   border: 2px #8c8c8c solid;
   border-radius: 50px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 ion-icon {
   margin-right: 10px;
 }
 
-ion-img {
+img {
   width: 250px;
   margin-left: 50%;
   margin-bottom: 30px;

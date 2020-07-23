@@ -1,27 +1,26 @@
 <ion-content [fullscreen]="true">
   <div class="header-home">
     <div class="ion-text-center">
-      <ion-label>Ainda não tem cadastro?<br>Faça seu cadastro clicando <a routerLink="/create-account">aqui</a></ion-label>
+      <ion-label>Ainda não tem cadastro?<br>Faça seu cadastro clicando <a routerLink="/create-account">aqui</a>
+      </ion-label>
     </div>
-    <div id="container">
-      <ion-row>
-        <ion-col offset-lg="4" size="12" size-lg="4">
-          <ion-img src="../../assets/logo.svg"></ion-img>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col offset-lg="4" size="12" size-lg="4">
-          <ion-item>
-            <ion-icon name="person-circle-outline"></ion-icon>
-            <ion-input placeholder="Email" [(ngModel)]="email"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-icon name="lock-closed-outline"></ion-icon>
-            <ion-input type="password" placeholder="Senha" [(ngModel)]="senha"></ion-input>
-          </ion-item>
-          <ion-button shape="round" (click)="entrar()">Entrar</ion-button>
-        </ion-col>
-      </ion-row>
+    <div id="form-background">
+      <div id="container">
+        <img src="../../assets/logo.svg">
+        <ion-row>
+          <ion-col offset-lg="4" size="12" size-lg="4">
+            <ion-item>
+              <ion-icon name="person-circle-outline"></ion-icon>
+              <ion-input placeholder="Email" [(ngModel)]="email"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="lock-closed-outline"></ion-icon>
+              <ion-input type="password" placeholder="Senha" [(ngModel)]="senha"></ion-input>
+            </ion-item>
+            <ion-button extended="full" shape="round" (click)="entrar()">Acessar</ion-button>
+          </ion-col>
+        </ion-row>
+      </div>
     </div>
   </div>
 </ion-content>

@@ -6,7 +6,7 @@ import { HttpClient , HttpHeaders} from '@angular/common/http';
 })
 export class AuthService {
 
-  endpointAddress="http://104.197.179.103:8080";
+  endpointAddress="http://10.0.0.11:8080";
 
   user:any;
   bearer_token:any;

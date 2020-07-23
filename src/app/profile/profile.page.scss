@@ -1,15 +1,16 @@
 .btn-img-profile {
-    margin-left: 50%;
-    transform: translateX(-50%);
+    margin-top: -200px;
 }
 
 .btn-change-password {
+    width: 235px;
     margin-top: 20px;
     margin-left: 50%;
     transform: translateX(-50%);
 }
 
 .btn-anamnese {
+    width: 235px;
     margin-top: 20px;
     margin-left: 50%;
     transform: translateX(-50%);
@@ -19,13 +20,16 @@
     margin-left: 50%;
     width: 150px;
     height: 150px;
+    position: relative;
     border: solid #ccc 2px;
     border-radius: 100%;
     transform: translateX(-50%);
 }
 
 .profile-img {
-    width: 80%;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
     margin-left: 50%;
     margin-top: 50%;
     transform: translate(-50%,-50%);
