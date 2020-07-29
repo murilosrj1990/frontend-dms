@@ -1,12 +1,13 @@
 ion-thumbnail div ion-label{
     font-size: 11pt;
-    color: #FFF
+    color: #DD3C3C;
 }
 
 ion-thumbnail{
     position: relative;
     border-radius: 10px;
-    background-color: #DB0000
+    background-color: #fff;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
 }
 
 .titulo-thumb{
@@ -16,7 +17,7 @@ ion-thumbnail{
     top: 50%; 
     transform: translateY(-50%);
     font-size: 6pt;
-    color: #FFF;
+    color: #DD3C3C;
 }
 
 .date {

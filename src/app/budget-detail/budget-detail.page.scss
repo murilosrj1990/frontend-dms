@@ -2,7 +2,8 @@
 ion-thumbnail {
     position: relative;
     border-radius: 10px;
-    background-color: #DB0000
+    background-color: #fff;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -26,7 +27,7 @@ ion-label .price {
 }
 
 .date {
-    color: rgb(255, 255, 255);
+    color: #DD3C3C;
 }
 
 .date {
@@ -50,5 +51,5 @@ ion-label .price {
     top: 50%; 
     transform: translateY(-50%);
     font-size: 6pt;
-    color: #FFF;
+    color: #DD3C3C;
 }
