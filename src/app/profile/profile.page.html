@@ -10,8 +10,7 @@
 <ion-content>
   <ion-row>
     <ion-col size="12" size-lg="6" offset-lg="3">
-      <div class="div-profile-img"><img class="profile-img"
-          src="{{userProfilePathImage ? userProfilePathImage : '../../assets/user.png'}}">
+      <div class="div-profile-img"><ion-avatar><img src="{{userProfilePathImage}}"></ion-avatar>
         <ion-fab-button (click)="upload()" size="small" class="btn-img-profile" shape="round" fill="outline">
           <ion-icon name="camera"></ion-icon>
         </ion-fab-button>
